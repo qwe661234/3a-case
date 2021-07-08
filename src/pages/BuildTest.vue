@@ -1,23 +1,28 @@
 <template>
-    <div>
-        建立考試
-        <div>
-            <span class="demonstration">自定义</span>
-            <el-image>
-                <div slot="error" class="image-slot">
-                    <i class="el-icon-upload"></i>
-                </div>
-            </el-image>
-        </div>
+    <div class="section">
+        <el-row>
+            <imageContainer />
+        </el-row>
+        <el-row>
+            <MiddleBlock />
+        </el-row>
     </div>
 </template>
 
 <script>
+import imageContainer from "@/container/BuildTest/BuildTestImageContainer.vue";
+import MiddleBlock from "@/container/BuildTest/BuildTestMiddleBlock.vue";
+
 export default {
     name: "BuildTest",
-    components: {},
+    components: {
+        imageContainer,
+        MiddleBlock,
+    },
     mounted() {
         this.$store.commit("updateTitle", "建立考試");
     },
 };
 </script>
+
+<style lang="scss" scoped></style>
